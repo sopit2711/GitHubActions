@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                sh 'ls -lsr'
+            }
+        }
+        stage('ckeck version') {
+            steps {
+                sh 'cat /etc/os-release'
+            }
+        }
+    }
+}
